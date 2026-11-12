@@ -7,9 +7,11 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --watch src --ext ts --exec \"node --experimental-strip-types src/app.ts\"",
+    "dev": "nodemon --watch src --ext ts --exec \"node --experimental-strip-types src/index.ts\"",
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/app.ts",
+    "build:watch": "tsc -p tsconfig.json --watch",
+    "start": "node dist/index.js",
+    "start:custom": "node dist/customType.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
