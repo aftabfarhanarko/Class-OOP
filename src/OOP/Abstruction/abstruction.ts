@@ -1,7 +1,7 @@
 // Abstract Class
 abstract class Shape {
   // Abstract method (No implementation)
-  abstract area(): number;
+  abstract area(): number; // Signature Line No-Implementation
 
   // Concrete method (Has implementation)
   displayArea(): void {

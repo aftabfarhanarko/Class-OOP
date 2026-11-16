@@ -108,19 +108,13 @@ const account = {
 // ========================================
 // 8. ENUM TYPES
 // ========================================
-var Role;
-(function (Role) {
-    Role[Role["Admin"] = 0] = "Admin";
-    Role[Role["User"] = 1] = "User";
-    Role[Role["Moderator"] = 2] = "Moderator";
-})(Role || (Role = {}));
+const Role = { Admin: 0, User: 1, Moderator: 2 };
 const userRole = Role.Admin;
-var OrderStatus;
-(function (OrderStatus) {
-    OrderStatus["Pending"] = "PENDING";
-    OrderStatus["Success"] = "SUCCESS";
-    OrderStatus["Failed"] = "FAILED";
-})(OrderStatus || (OrderStatus = {}));
+const OrderStatus = {
+    Pending: "PENDING",
+    Success: "SUCCESS",
+    Failed: "FAILED",
+};
 // ========================================
 // 9. FUNCTION TYPES
 // ========================================
@@ -244,21 +238,21 @@ const response = {
         isActive: true,
     },
 };
+export {};
 // ========================================
 // 21. CONSOLE OUTPUT
 // ========================================
-console.log("Name:", name);
-console.log("Age:", age);
-console.log("Numbers:", numbers);
-console.log("Person:", person);
-console.log("User:", newUser);
-console.log("Product:", product);
-console.log("Account:", account);
-console.log("Role:", userRole);
-console.log("Addition:", add(10, 20));
-console.log("Student:", studentData);
-console.log("Employee:", employee);
-console.log("API Response:", response);
-console.log("Generic Result:", result1, result2);
-export {};
+// console.log("Name:", name);
+// console.log("Age:", age);
+// console.log("Numbers:", numbers);
+// console.log("Person:", person);
+// console.log("User:", newUser);
+// console.log("Product:", product);
+// console.log("Account:", account);
+// console.log("Role:", userRole);
+// console.log("Addition:", add(10, 20));
+// console.log("Student:", studentData);
+// console.log("Employee:", employee);
+// console.log("API Response:", response);
+// console.log("Generic Result:", result1, result2);
 //# sourceMappingURL=index.js.map

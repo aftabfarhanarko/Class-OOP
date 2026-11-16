@@ -198,19 +198,16 @@ const account: UserAccount = {
 // 8. ENUM TYPES
 // ========================================
 
-enum Role {
-  Admin,
-  User,
-  Moderator,
-}
+const Role = { Admin: 0, User: 1, Moderator: 2 } as const;
+type Role = (typeof Role)[keyof typeof Role];
 
 const userRole: Role = Role.Admin;
 
-enum OrderStatus {
-  Pending = "PENDING",
-  Success = "SUCCESS",
-  Failed = "FAILED",
-}
+const OrderStatus = {
+  Pending: "PENDING",
+  Success: "SUCCESS",
+  Failed: "FAILED",
+} as const;
 
 
 // ========================================
@@ -466,16 +463,17 @@ const response: ApiResponse<User> = {
 // 21. CONSOLE OUTPUT
 // ========================================
 
-console.log("Name:", name);
-console.log("Age:", age);
-console.log("Numbers:", numbers);
-console.log("Person:", person);
-console.log("User:", newUser);
-console.log("Product:", product);
-console.log("Account:", account);
-console.log("Role:", userRole);
-console.log("Addition:", add(10, 20));
-console.log("Student:", studentData);
-console.log("Employee:", employee);
-console.log("API Response:", response);
-console.log("Generic Result:", result1, result2);
+// console.log("Name:", name);
+// console.log("Age:", age);
+// console.log("Numbers:", numbers);
+// console.log("Person:", person);
+// console.log("User:", newUser);
+// console.log("Product:", product);
+// console.log("Account:", account);
+// console.log("Role:", userRole);
+// console.log("Addition:", add(10, 20));
+// console.log("Student:", studentData);
+// console.log("Employee:", employee);
+// console.log("API Response:", response);
+// console.log("Generic Result:", result1, result2);
+
