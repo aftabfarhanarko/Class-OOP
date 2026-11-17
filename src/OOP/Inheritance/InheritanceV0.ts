@@ -21,7 +21,10 @@ class Person {
 }
 
 const p = new Person();
+console.log(p.printDetics());
 
 const p2 = new Person("C++");
+console.log(p2.printDetics());
 
 const p3 = new Person("C#", 45);
+console.log(p3.printDetics());
