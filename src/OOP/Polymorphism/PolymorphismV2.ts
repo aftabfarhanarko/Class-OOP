@@ -1,30 +1,42 @@
-class Animal {
-  spek() {
-    console.log("Animal Spek");
-  }
-}
-class Dog extends Animal{
-  spek(){
-    console.log("Dog Spaking");
-    
-  }
+interface Person {
+  name: string;
+  age: number;
+  email: string;
 }
 
-
-class Cat extends Animal{
-  spek(){
-    console.log("Cat Spaking");
-    
-  }
+interface Employ {
+  userId: string;
+  amount: number;
 }
 
-
-function taking(animal:Animal){
-  animal.spek();
+interface Student extends Person, Employ {
+  // Inherits all fields from Person and Employ
 }
 
-const d = new Dog()
-const c = new Cat()
+class UniversityStudent implements Student {
+  constructor(
+    public name: string,
+    public age: number,
+    public email: string,
+    public userId: string,
+    public amount: number,
+  ) {}
+}
 
-taking(d);
-taking(c);
+function printDetails(student: Student): void {
+  console.log(`Name: ${student.name}`);
+  console.log(`Age: ${student.age}`);
+  console.log(`Email: ${student.email}`);
+  console.log(`User ID: ${student.userId}`);
+  console.log(`Amount: ${student.amount}`);
+}
+
+const student = new UniversityStudent(
+  "Amina",
+  20,
+  "amina@example.com",
+  "STU-101",
+  5000,
+);
+
+printDetails(student);
