@@ -13,7 +13,7 @@ class InjectPrinter implements Inject {
   }
 }
 
-class DottPrinter implements Inject {
+class DotPrinter implements Inject {
   printForm(): void {
     console.log("Print Now");
   }
